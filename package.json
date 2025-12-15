@@ -1,0 +1,34 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "server.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporter": [
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "forceExit": true
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  }
+}
